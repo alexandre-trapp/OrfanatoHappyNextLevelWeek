@@ -1,24 +1,33 @@
 import React from 'react';
+import { FiArrowRight } from 'react-icons/fi' 
 
-interface TitleProps {
+import './styles/global.css';
+import './styles/pages/landing.css';
+
+import logoImg from './images/logo.svg'; 
   
-  text: string;
-}
-
-function Title(props: TitleProps) {
-
-  return (
-    <h1>{props.text}</h1>
-  )
-}
-
 function App() {
   return (
-    <div className="App">
-      <Title text="Titulo 1" />
-      <Title text="Titulo 2" />
-      <Title text="Titulo 3" />
-      <Title text="Titulo 4" />
+    <div id="page-landing">
+      
+      <div className="content-wrapper">
+        <img src={logoImg} alt="happy" />
+        
+        <main>
+          <h1>Leve felicidade para o mundo</h1>
+          <p>Visite orfanatos e mude o dia muitas crianças.</p>
+        </main>
+
+        <div className="location">
+          <strong>Blumenau</strong>
+          <span>Santa Catarina</span>
+        </div>  
+
+        <a href="" className="enter-app">
+          <FiArrowRight size={26} color="rgba(0, 0, 0, 0.6)" />
+        </a>
+      </div>
+    
     </div>
   );
 }
