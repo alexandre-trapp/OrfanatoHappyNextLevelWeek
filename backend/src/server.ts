@@ -1,5 +1,7 @@
 import express from 'express';
 
+import './database/connection';
+
 const app = express();
 
 app.use(express.json());
@@ -19,3 +21,5 @@ app.get('/users', (request, response) => {
 });
 
 app.listen(3333);
+
+// base de dados: driver nativo, query builder, ORM, usaremos ORM
