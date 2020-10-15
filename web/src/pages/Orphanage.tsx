@@ -61,7 +61,7 @@ export default function Orphanage() {
                 
                 <button
                   key={image.id}
-                  className="active"
+                  className={activeImageIndex === index ? 'active' : ''}
                   type="button"
                   onClick={() => {
                     setActiveImageIndex(index)
