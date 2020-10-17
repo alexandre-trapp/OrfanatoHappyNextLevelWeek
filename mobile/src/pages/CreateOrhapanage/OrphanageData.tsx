@@ -43,7 +43,7 @@ export default function OrphanageData() {
 
     images.forEach((image, index) => {
       
-      data.append('image', {
+      data.append('images', {
         name: `image_${index}.jpg`,   
         type: 'image/jpg',
         uri: image,
@@ -51,7 +51,7 @@ export default function OrphanageData() {
 
     });
 
-    await api.post('orphanages', data);
+    await api.post('/orphanages', data);
 
     navigation.navigate('OrphanagesMap');
   }
