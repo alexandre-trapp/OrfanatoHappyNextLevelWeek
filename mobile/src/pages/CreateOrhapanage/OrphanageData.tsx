@@ -151,7 +151,7 @@ export default function OrphanageData() {
         />
       </View>
 
-      <RectButton style={styles.nextButton} onPress={(handleCreateOrphanage) => {}}>
+      <RectButton style={styles.nextButton} onPress={(handleCreateOrphanage)}>
         <Text style={styles.nextButtonText}>Cadastrar</Text>
       </RectButton>
     </ScrollView>
