@@ -8,10 +8,13 @@ const { Navigator, Screen } = createStackNavigator();
 import OrphanagesMap from './pages/OrphanagesMap';
 import OrphanageDetails from './pages/OrphanageDetails';
 
+import SelectMapPosition from './pages/CreateOrhapanage/SelectMapPosition';
+import OrphanageData from './pages/CreateOrhapanage/OrphanageData';
+
 export default function Routes() {
   return (
     <NavigationContainer>
-      <Navigator screenOptions={{ headerShown: false }}>
+      <Navigator screenOptions={{ headerShown: false, cardStyle: { backgroundColor: '#f2f3f5' } }}>
         
         <Screen
           name="OrphanagesMap"
@@ -21,6 +24,16 @@ export default function Routes() {
         <Screen
           name="OrphanageDetails"
           component={OrphanageDetails}
+        />
+
+        <Screen
+          name="SelectMapPosition"
+          component={SelectMapPosition}
+        />
+
+        <Screen
+          name="OrphanageData"
+          component={OrphanageData}
         />
 
       </Navigator>
