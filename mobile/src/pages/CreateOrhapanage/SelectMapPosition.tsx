@@ -13,7 +13,7 @@ export default function SelectMapPosition() {
   const [position, setPosition] = useState({ latitude: 0, longitude: 0 });
 
   function handleNextStep() {
-    navigation.navigate('OrphanageData');
+    navigation.navigate('OrphanageData', { position });
   }
 
   function handleSelectMapPosition(event: MapEvent) {
@@ -44,7 +44,7 @@ export default function SelectMapPosition() {
 
       {
         position.latitude !== 0 && (
-          
+
           <RectButton style={styles.nextButton} onPress={handleNextStep}>
             <Text style={styles.nextButtonText}>Próximo</Text>
           </RectButton>
