@@ -10,6 +10,7 @@ import OrphanageDetails from './pages/OrphanageDetails';
 
 import SelectMapPosition from './pages/CreateOrhapanage/SelectMapPosition';
 import OrphanageData from './pages/CreateOrhapanage/OrphanageData';
+import Header from './components/Header';
 
 export default function Routes() {
   return (
@@ -24,6 +25,10 @@ export default function Routes() {
         <Screen
           name="OrphanageDetails"
           component={OrphanageDetails}
+          options={{
+            headerShown: true,
+            header: () => <Header title="Orfanato"/>
+          }}
         />
 
         <Screen
